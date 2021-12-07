@@ -29,5 +29,12 @@
   </div>
 <% end %>
 
+<h2>Review list</h2>
+<ul>
+  <% @book.book_review.each do |review| %>
+     <li><%= review.review %> (<%= review.user_id %>)</li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
